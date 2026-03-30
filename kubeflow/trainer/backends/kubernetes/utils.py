@@ -365,6 +365,7 @@ def get_command_using_train_func(
         func_file = os.path.join(constants.DEFAULT_MPI_USER_HOME, func_file)
         install_log_file = os.path.join(constants.DEFAULT_MPI_USER_HOME, "pip_install.log")
     else:
+        func_file = os.path.join("/tmp", func_file)
         install_log_file = "pip_install.log"
 
     # Install Python packages if that is required.
